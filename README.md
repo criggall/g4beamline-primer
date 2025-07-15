@@ -9,7 +9,7 @@ This repository contains everything you need to establish your first G4beamline 
 
 
 ## G4beamline Documentation
-[coming soon]
+Official Muons, Inc. Users Guide for G4beamline version 3.08: https://www.muonsinc.com/Website1/Muons/G4beamlineUsersGuide.pdf
 
 
 
