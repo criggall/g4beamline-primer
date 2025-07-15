@@ -1,0 +1,10 @@
+services:
+  physics-sim:
+    image: valetov/g4bl:3.08
+    container_name: g4bl
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash
