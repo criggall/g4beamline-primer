@@ -24,7 +24,7 @@ If you do not have already have Docker installed on your machine, you can downlo
 G4beamline Docker image used: https://hub.docker.com/r/valetov/g4bl
 
 ### Local Installation
-G4beamline is available for download as an application from [here](https://muonsinc.com/G4beamlineDownload.php). (Note that you may be prompted to complete a survey before being permitted access to the download page.)
+G4beamline is available for download as an application [here](https://muonsinc.com/G4beamlineDownload.php). (Note that you may be prompted to complete a survey before being permitted access to the download page.)
 
 In order to run G4beamline from terminal, you will need to provide a path to the installation. A template ```.bash_profile``` doing so has been provided in this repository, but you will need to add the installation path depending on your setup. For example, on Mac this may look like ```/Applications/G4beamline-3.08.app/Contents/MacOS```.
 
