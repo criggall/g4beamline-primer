@@ -63,20 +63,27 @@ opens the GUI in a separate window. (Note that this will not work with Docker!) 
 
 
 
-
 ## Using the GUI
-[coming soon]
+The GUI can be used to access the visualizer -- a useful tool for viewing the geometry and placement of your configuration. It is highly recommended that you use this option!
 
+<div align="center"><img width="791" height="623" alt="g4blgui" src="https://github.com/user-attachments/assets/0cfa8907-6fdc-48d5-9e45-7b9cf9b4c1ce"/></div>
+<div align="center"> G4beamline GUI </div> <br>
+
+The visualizer will be selected by default. Running the visualizer with your input file selected will bring up a second window with an interactive 3D model of your configuration. To add particle tracks to the render, increment the "Events per image" accordingly.
+
+Note that utilizing the visualization will prevent some data write out. To properly run a file with full output, uncheck the "Visualization" box first.
 
 
 
 ## Examples
-[coming soon]
+Example G4beamline input files can be found in the ```examples``` directory. The provided examples include:
+- [coming soon]
 
 
 
 ## Useful Scripts
-[coming soon]
+Some general python scripts for use in your G4beamline project are located in the ```functions``` directory. The functions included are as follows:
+- [coming soon]
 
 
 
