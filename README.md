@@ -53,7 +53,7 @@ To run G4beamline from terminal use the syntax,
 ```
 g4bl file-name.in
 ```
-where ```file-name.in``` is your G4beamline input card. Subsequent arguments can be added to this command; for more on this consult the Users Guide.
+where ```file-name.in``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). To see the supported viewer options, see the table on page 22 of the Users Guide.
 
 To launch the GUI from terminal,
 ```
@@ -69,9 +69,14 @@ The GUI can be used to access the visualizer -- a useful tool for viewing the ge
 <div align="center"><img width="791" height="623" alt="g4blgui" src="https://github.com/user-attachments/assets/0cfa8907-6fdc-48d5-9e45-7b9cf9b4c1ce"/></div>
 <div align="center"> G4beamline GUI </div> <br>
 
-The visualizer will be selected by default. Running the visualizer with your input file selected will bring up a second window with an interactive 3D model of your configuration. To add particle tracks to the render, increment the "Events per image" accordingly.
+The visualizer will be selected by default. Running with this selected will bring up a second window with an interactive 3D model of your configuration. 
 
-Note that utilizing the visualization will prevent some data write out. To properly run a file with full output, uncheck the "Visualization" box first.
+<div align="center"><img width="925" height="358" alt="g4bl_visualizer_tracks" src="https://github.com/user-attachments/assets/d84cc8f6-d106-45dc-afcc-21518e04e9c2" /></div>
+<div align="center"> G4beamline Visualization Window </div> <br>
+
+To add particle tracks to the render, type the desired number of events in the top left window and hit "Next Image" to see the tracks appear in the model.
+
+Note that utilizing the visualization tool will prevent some data write out. To properly run a file with full output, uncheck the "Visualization" box first.
 
 
 
