@@ -51,9 +51,9 @@ This will establish a bash environment in which you can now run G4beamline commm
 ### G4beamline Terminal Commands
 To run G4beamline from terminal use the syntax,
 ```
-g4bl file-name.in
+g4bl file-name.g4bl
 ```
-where ```file-name.in``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). To see the supported viewer options, see the table on page 22 of the Users Guide.
+where ```file-name.g4bl``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). To see the supported viewer options, see the table on page 22 of the Users Guide.
 
 To launch the GUI from terminal,
 ```
