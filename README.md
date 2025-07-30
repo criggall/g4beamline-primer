@@ -80,17 +80,26 @@ Note that utilizing the visualization tool will prevent some data write out. To 
 
 
 
+## Building the Input File
+The configuration of your G4beamline simulation is specified in the text input file (```*.g4bl```) you provide. A template file, ```template.g4bl```, has been provided here to get you started in constructing your input!
+
+
+
+## Automating G4beamline
+When iteratively running simulations over a parameter scan, it is useful to automate the procedure with scripting. The ```automate-g4bl.py``` file serves as a skeletal python script for building your automated G4beamline setup.
+
+
+
 ## Examples
-Example G4beamline input files can be found in the ```examples``` directory. The provided examples include:
-- [coming soon]
+Some example files are available to demonstrate many of the more nuanced features in G4beamline that may be difficult to parse from the documentation. An overview of the included examples is as follows,
+- ```basic-g4bl-demo```: provides an overview of some useful G4beamline features, here used to construct a solenoid-based lattice
+- ```automated-g4bl-demo```: gives an illustration of how iterative simulations can be automated with python by scripting the process of writing an input file
+- ```examples```: a compilation of the example input cards given in the Users Guide, presenting demonstrative simulations such as a simple cooling channel, a target, etc.
 
 
+## Coming Soon
+Future versions of this tutorial will include:
+- Examples of muon cooling channels (such as HFOFO and rectilinear)
+- Infrastructure, instructions, and examples for integrating G4beamline with ICOOL/ECALC9
 
-## Useful Scripts
-Some general python scripts for use in your G4beamline project are located in the ```functions``` directory. The functions included are as follows:
-- [coming soon]
-
-
-
-## Integrating with ICOOL
-[coming soon]
+If there is anything else you would like to see included, please reach out with suggestions!
