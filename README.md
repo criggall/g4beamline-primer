@@ -111,7 +111,7 @@ When iteratively running simulations over a parameter scan, it is useful to auto
 
 
 ## Examples
-The ```examples``` directory contains a compilation of the example input cards given in the Users Guide, presenting demonstrative simulations such as a simple cooling channel, MICE, a target, etc. 
+The ```examples``` directory contains a compilation of select example input cards given in the Users Guide, presenting demonstrative simulations such as a simple cooling channel, a target, etc.
 
 Future versions of this repository will include more advanced examples designed to feature some of the more nuanced functionalities of G4beamline that are difficult to parse from the Users Guide. A few of the features planned to be included in these examples are:
 - Defining macros
