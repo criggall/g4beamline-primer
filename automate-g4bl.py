@@ -23,7 +23,9 @@ def run_g4bl_sim(file):
 
 # Define function to move output files to simulation directory:
 def mv_ref_file(dir, out_dir):
-    mv_ref_file_command = f"mv {dir}*.txt {out_dir} & mv g4bl.out {out_dir} & mv {dir}*.dat"
+    #mv_ref_file_command = f"mv {dir}*.txt {out_dir} & mv g4bl.out {out_dir} & mv {dir}*.dat"
+    # Update this command to use the specific names of your output files to avoid accidentally moving other files!
+    mv_ref_file_command = 
     mv_ref_file_process = subprocess.run(mv_ref_file_command, shell=True, capture_output=False)
 
 ########## DEFINE SCAN PARAMETERS ##########
