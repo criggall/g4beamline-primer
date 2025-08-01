@@ -22,14 +22,11 @@ def run_g4bl_sim(file):
     return g4bl_process.stdout, g4bl_process.stderr
 
 # Define function to move output files to simulation directory:
-def mv_ref_file(g4bl_dir, out_dir):
-    mv_ref_file_command = f"mv {g4bl_dir}*.txt {out_dir} & mv g4bl.out {out_dir} & mv {g4bl_dir}*.dat"
+def mv_ref_file(dir, out_dir):
+    mv_ref_file_command = f"mv {dir}*.txt {out_dir} & mv g4bl.out {out_dir} & mv {dir}*.dat"
     mv_ref_file_process = subprocess.run(mv_ref_file_command, shell=True, capture_output=False)
 
 ########## DEFINE SCAN PARAMETERS ##########
-
-# Define directory where G4beamline will run (e.g. location of .bash_profile):
-g4bl_dir = 
 
 # Define working directory (+ place input files here):
 dir = 
@@ -37,8 +34,8 @@ dir =
 # Define file locations:
 #file = dir+'input.g4bl' # G4bl input card
 file = 
-#beam_file = dir+'initial.dat' # beam input file
-beam_file = 
+#beam_file = dir+'initial.dat' # beam input file, if applicable
+#beam_file = 
 
 file_for_g4bl = '"'+file+'"'
 
@@ -50,7 +47,7 @@ file_for_g4bl = '"'+file+'"'
 iterations = 
 
 # Define function for modifying G4beamline input card:
-def modify_g4bl_input(dir, file, beam_file, parameters, out_dir):
+def modify_g4bl_input(dir, file, parameters, out_dir):
 
     with open(file, 'r') as f:
         lines = f.readlines()
@@ -80,12 +77,12 @@ for j in range(iterations):
 
     # Set configurable parameters:
     parameters = {
-        #'reference momentum' : ref_p
+        #'reference momentum' : ref_p[j]
 
     }
 
     # Modify input files:
-    modify_g4bl_input(dir, file, beam_file, parameters, out_dir)
+    modify_g4bl_input(dir, file, parameters, out_dir)
 
     # Copy input card to simulation directory:
     copy_in(file, out_dir)
@@ -101,4 +98,4 @@ for j in range(iterations):
             print("Output:", stdout)
     
     # Move output files to simulation directory:
-    mv_ref_file(g4bl_dir, out_dir)
+    mv_ref_file(dir, out_dir)
