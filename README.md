@@ -52,9 +52,9 @@ This will establish a bash environment in which you can now run G4beamline commm
 ### G4beamline Terminal Commands
 To run G4beamline from terminal use the syntax,
 ```
-g4bl file-name.g4bl
+g4bl input.g4bl
 ```
-where ```file-name.g4bl``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). For more on this, see the Visualization section below.
+where ```input.g4bl``` is replaced by the name of your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). For more on this, see the Visualization section below.
 
 ### Using the GUI
 To launch the GUI from terminal,
@@ -82,7 +82,15 @@ To add particle tracks to the render, type the desired number of events in the t
 
 ### Offline Viewers
 
-In leiu of using the native G4beamline visualization window, a model of your configuration can also be output for offline viewing. Appending ```viewer=``` with one of the options given on page 22 of the Users Guide will write-out the visualization to the given file type.
+In leiu of using the native G4beamline visualization window, a model of your configuration can also be output for offline viewing. Appending ```viewer=``` to your run command with one of the options given on page 22 of the Users Guide will write-out the visualization to the given file type. For example,
+```
+g4bl input.g4bl viewer=VRML2FILE
+```
+To specify the number of images and events to simulate for the visualization, use the syntax ```viewer=option,images,events``` with the respective arguments replaced by the desired numbers. For example,
+```
+g4bl input.g4bl viewer=VRML2FILE,1,10
+```
+will output a .wrl file with 1 image containing 10 particle tracks. Failing to specify these parameters will open a command line (```Idle>```) where the running ```/run/beamOn events``` (with events replaced by the desired number of events) will have the equivalent effect -- i.e., producing a file of the specified type.
 
 A popular approach to creating visuals is by using [Blender](https://www.blender.org) to generate renderings of your model. An outline of the procedure for doing so is given below.
 
