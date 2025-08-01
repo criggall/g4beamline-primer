@@ -5,7 +5,8 @@ This repository contains everything you need to establish your first G4beamline 
 
 ## How to Use this Repository
 
-- Fork this repository to use as a template for your next project or to work through the examples.
+- Fork this repository to use as a template for your next project.
+- Work through the examples.
 - Consult the [Issues](https://github.com/criggall/g4beamline-tutorial/issues) page for solutions to common problems and questions.
 
 
@@ -53,30 +54,39 @@ To run G4beamline from terminal use the syntax,
 ```
 g4bl file-name.g4bl
 ```
-where ```file-name.g4bl``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). To see the supported viewer options, see the table on page 22 of the Users Guide.
+where ```file-name.g4bl``` is your G4beamline input card. Subsequent arguments can be appended to this command; for example, the ```viewer=``` argument can be used to visualize your configuration geometry on or offline (i.e., export to a file). For more on this, see the Visualization section below.
 
+### Using the GUI
 To launch the GUI from terminal,
 ```
 g4blgui
 ```
 opens the GUI in a separate window. (Note that this will not work with Docker!) The GUI can also be accessed by launching G4beamline like a traditional application.
 
-
-
-## Using the GUI
-The GUI can be used to access the visualizer -- a useful tool for viewing the geometry and placement of your configuration. It is highly recommended that you use this option!
-
 <div align="center"><img width="791" height="623" alt="g4blgui" src="https://github.com/user-attachments/assets/0cfa8907-6fdc-48d5-9e45-7b9cf9b4c1ce"/></div>
 <div align="center"> G4beamline GUI </div> <br>
 
-The visualizer will be selected by default. Running with this selected will bring up a second window with an interactive 3D model of your configuration. 
+The visualizer will be selected at the top left by default. Running with this selected will prevent some data write out; to properly run a file with full output, uncheck the "Visualization" box first.
+
+
+## Visualization
+
+Visualization is a useful tool for viewing the geometry and placement of objects in your configuration. It is highly recommended that you use this option whenever you make adjustments to your build! 
+
+Running with the "Visualization" box selected will bring up a second window with an interactive 3D model of your configuration. 
 
 <div align="center"><img width="925" height="358" alt="g4bl_visualizer_tracks" src="https://github.com/user-attachments/assets/d84cc8f6-d106-45dc-afcc-21518e04e9c2" /></div>
 <div align="center"> G4beamline Visualization Window </div> <br>
 
 To add particle tracks to the render, type the desired number of events in the top left window and hit "Next Image" to see the tracks appear in the model.
 
-Note that utilizing the visualization tool will prevent some data write out. To properly run a file with full output, uncheck the "Visualization" box first.
+### Offline Viewers
+
+In leiu of using the native G4beamline visualization window, a model of your configuration can also be output for offline viewing. Appending ```viewer=``` with one of the options given on page 22 of the Users Guide will write-out the visualization to the given file type.
+
+A popular approach to creating visuals is by using Blender to generate renderings of your model. An outline of the procedure for doing so is given below.
+
+<img width="976" height="514" alt="Screenshot 2025-07-31 at 10 13 13 PM" src="https://github.com/user-attachments/assets/cb1ed098-2cc8-415f-8233-c11e51d27cb8" />
 
 
 
@@ -91,14 +101,18 @@ When iteratively running simulations over a parameter scan, it is useful to auto
 
 
 ## Examples
-Some example files are available to demonstrate many of the more nuanced features in G4beamline that may be difficult to parse from the documentation. An overview of the included examples is as follows,
-- ```basic-g4bl-demo```: provides an overview of some useful G4beamline features, here used to construct a solenoid-based lattice
-- ```automated-g4bl-demo```: gives an illustration of how iterative simulations can be automated with python by scripting the process of writing an input file
-- ```examples```: a compilation of the example input cards given in the Users Guide, presenting demonstrative simulations such as a simple cooling channel, a target, etc.
+The ```examples``` directory contains a compilation of the example input cards given in the Users Guide, presenting demonstrative simulations such as a simple cooling channel, MICE, a target, etc. 
+
+Future versions of this repository will include more advanced examples designed to feature some of the more nuanced functionalities of G4beamline that are difficult to parse from the Users Guide. A few of the features planned to be included in these examples are:
+- Defining macros
+- Setting custom output names
+- Using loops and if statements
+- Generating field maps
+
 
 
 ## Coming Soon
-Future versions of this tutorial will include:
+Ideas for future versions of this repository:
 - Examples of muon cooling channels (such as HFOFO and rectilinear)
 - Infrastructure, instructions, and examples for integrating G4beamline with ICOOL/ECALC9
 
