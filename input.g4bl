@@ -1,0 +1,84 @@
+#########################
+### GLOBAL PARAMETERS ###
+#########################
+
+# Define physics model -- with stochastics/decays enabled:
+physics QGSP_BIC doStochastics=1
+
+# Or, define physics model -- with stochastics/decays disabled:
+#physics QGSP_BIC doStochastics=0
+
+# Set max step size for simulation:
+#param maxStep=5.0
+param maxStep=
+
+# Define reference particle momentum:
+#param ref_p=200
+param ref_p=
+
+# Set other simulation preferences, definitions of constants, world materials, etc. here
+
+######################
+### INITIALIZATION ###
+######################
+
+# Set reference particle:
+#reference reference particle=mu+ beamX=0.0 beamY=0.0 beamZ=0.0 beamXp=0.0 beamYp=0.0 referenceMomentum=$ref_p
+reference reference particle= beamX= beamY= beamZ= beamXp= beamYp= referenceMomentum=$ref_p
+
+# Define gaussian beam:
+#beam gaussian particle=mu+ nEvents=10000 beamX=1.50 beamY=0.0 beamZ=0.0 beamXp=0.0  beamYp=0.0 \
+#     sigmaX=20.0 sigmaY=20.0 sigmaXp=0.1 sigmaYp=0.1 meanMomentum=$ref_p sigmaP=0.0 meanT=0.0 sigmaT=0.0
+beam gaussian particle= nEvents= beamX= beamY= beamZ= beamXp= beamYp= \
+     sigmaX= sigmaY= sigmaXp= sigmaYp= meanMomentum= sigmaP= meanT= sigmaT=
+
+# Or, provide a beam file:
+#beam ascii file=initial.dat beamZ=-500.0
+beam ascii file=
+
+# Optionally select tracking cuts -- for example, remove secondaries:
+#trackcuts killSecondaries=1
+
+# Add particle tracking:
+#trace format=ascii nTrace=10 oneNTuple=1
+trace format=ascii nTrace=
+
+############################
+### GEOMETRY DEFINITIONS ###
+############################
+
+# Define element parameters -- for example a solenoid:
+#param sol_inner=400.0
+#param sol_thick=100.0
+#param sol_length=400.0
+#param period=2000.0
+#param sol_current=100.0
+#coil Coil innerRadius=$sol_inner outerRadius=$sol_inner+$sol_thick length=$sol_length maxR=5000 maxZ=10000.0
+#solenoid FOFOpCoil coilName=Coil current=$sol_current
+#solenoid FOFOnCoil coilName=Coil current=-$solcurrent
+
+# Define detector parameters:
+#virtualdetector det radius=500 length=0.001 color=0,1,0 format=ascii
+virtualdetector det radius= length= color= format=ascii
+
+#########################
+### ELEMENT PLACEMENT ###
+#########################
+
+# Place elements -- for example solenoids in a FOFO lattice:
+
+#do i 0 2
+
+#  place det x=0 y=0 z=$period*$i
+#  place FOFOpCoil x=0 y=0 z=$period*$i+$period/4
+#  place det x=0 y=0 z=$period*$i+$period/2
+#  place FOFOnCoil x=0 y=0 z=$period*$i+$period*3/4
+
+#enddo
+
+do i 
+
+    place 
+
+enddo
+
