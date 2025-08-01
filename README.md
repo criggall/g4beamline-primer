@@ -84,7 +84,7 @@ To add particle tracks to the render, type the desired number of events in the t
 
 In leiu of using the native G4beamline visualization window, a model of your configuration can also be output for offline viewing. Appending ```viewer=``` with one of the options given on page 22 of the Users Guide will write-out the visualization to the given file type.
 
-A popular approach to creating visuals is by using Blender to generate renderings of your model. An outline of the procedure for doing so is given below.
+A popular approach to creating visuals is by using [Blender](https://www.blender.org) to generate renderings of your model. An outline of the procedure for doing so is given below.
 
 <img width="976" height="514" alt="Screenshot 2025-07-31 at 10 13 13 PM" src="https://github.com/user-attachments/assets/cb1ed098-2cc8-415f-8233-c11e51d27cb8" />
 
