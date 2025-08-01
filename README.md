@@ -99,7 +99,7 @@ A popular approach to creating visuals is by using [Blender](https://www.blender
 
 
 ## Building the Input File
-The configuration of your G4beamline simulation is specified in the text input file (```*.g4bl```) you provide. A template file, ```template.g4bl```, has been provided here to get you started in constructing your input!
+The configuration of your G4beamline simulation is specified in the text input file (```*.g4bl```) you provide. A template file, ```input.g4bl```, has been provided here to get you started in constructing your input!
 
 
 
