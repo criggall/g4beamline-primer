@@ -127,3 +127,8 @@ Ideas for future versions of this repository:
 - Infrastructure, instructions, and examples for integrating G4beamline with ICOOL/ECALC9
 
 If there is anything else you would like to see included, please reach out with suggestions!
+
+
+
+## Contact
+Have questions or suggestions? Send an email to me (Caroline) at criggall@tennessee.edu.
